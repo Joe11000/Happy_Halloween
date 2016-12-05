@@ -1,0 +1,75 @@
+$pentagram_delay: 0s;
+$pentagram_duration: 10s;
+$pentagram_path_box_path: 125px;
+
+$background_duation: 225s;
+$background_delay: $pentagram_delay;
+
+body{
+  background: url('spooky.jpg') 0% center no-repeat;
+  animation: slowly_move_background_image $background_duation linear $background_delay infinite alternate;
+
+  #img-flex {
+    display: flex;
+    img, svg {
+     display: inline;
+    }
+
+    #pentagram-container {
+      margin: 50px auto;
+
+      #text {
+        left: 250px;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: bolder;
+        font-size: 55px;
+        animation: move $pentagram_duration linear $pentagram_delay infinite;
+        top: 100px;
+
+        #happy{
+          position: absolute;
+          transform: translateX(-50%);
+          background: url('fire.gif');
+          font-size: 85px;
+        }
+        #halloween{
+          position: absolute;
+          top: 287px;
+          transform: translateX(-50%);
+          background: url('fire.gif');
+          font-size: 65px;
+        }
+      }
+
+      #pentagram{
+        animation: move_and_rotate $pentagram_duration linear $pentagram_delay infinite;
+        transform-origin: center;
+        opacity: .9;
+      }
+    }
+  }
+}
+
+@keyframes move_and_rotate {
+  0%   { transform: translate(0, 0)  rotate(0deg); opacity: .9; }
+  25%  { transform: translate($pentagram_path_box_path / 2, $pentagram_path_box_path / 2)   rotate(-90deg);    }
+  50%  { transform: translate(0px, $pentagram_path_box_path)   rotate(-180deg);   opacity: .75;      }
+  75%  { transform: translate(- $pentagram_path_box_path / 2, $pentagram_path_box_path / 2)  rotate(-270deg);  }
+  100% { transform: translate(0px, 0px) rotate(-360deg); opacity: .9; }
+}
+
+@keyframes move {
+  0%   { transform: translate(0, 0); opacity: .9; }
+  25%  { transform: translate($pentagram_path_box_path / 2, $pentagram_path_box_path / 2); }
+  50%  { transform: translate(0px, $pentagram_path_box_path); opacity: .75; }
+  75%  { transform: translate(- $pentagram_path_box_path / 2, $pentagram_path_box_path / 2); }
+  100% { transform: translate(0px, 0px); opacity: .9; }
+}
+
+@keyframes slowly_move_background_image {
+  0%   { background-position: 0%   center; }
+  100% { background-position: 100% center; }
+}

@@ -1,17 +1,12 @@
 body {
-  background: url("erdopan2.jpg") center center; }
+  background: url("spooky.jpg") 0% center no-repeat;
+  animation: slowly_move_background_image 225s linear 0s infinite alternate; }
   body #img-flex {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 30px; }
+    display: flex; }
     body #img-flex img, body #img-flex svg {
       display: inline; }
     body #img-flex #pentagram-container {
-      flex: 1;
-      display: flex;
-      justify-content: center;
-      position: relative; }
+      margin: 50px auto; }
       body #img-flex #pentagram-container #text {
         left: 250px;
         position: relative;
@@ -20,21 +15,21 @@ body {
         text-transform: uppercase;
         font-weight: bolder;
         font-size: 55px;
-        animation: move 10s linear 2s infinite;
+        animation: move 10s linear 0s infinite;
         top: 100px; }
         body #img-flex #pentagram-container #text #happy {
           position: absolute;
           transform: translateX(-50%);
-          text-shadow: 0 0 12px red;
+          background: url("fire.gif");
           font-size: 85px; }
         body #img-flex #pentagram-container #text #halloween {
           position: absolute;
           top: 287px;
           transform: translateX(-50%);
-          text-shadow: 0 0 12px red;
-          font-size: 61px; }
+          background: url("fire.gif");
+          font-size: 65px; }
       body #img-flex #pentagram-container #pentagram {
-        animation: move_and_rotate 10s linear 2s infinite;
+        animation: move_and_rotate 10s linear 0s infinite;
         transform-origin: center;
         opacity: .9; }
 
@@ -43,12 +38,12 @@ body {
     transform: translate(0, 0) rotate(0deg);
     opacity: .9; }
   25% {
-    transform: translate(50px, 50px) rotate(-90deg); }
+    transform: translate(62.5px, 62.5px) rotate(-90deg); }
   50% {
-    transform: translate(0px, 100px) rotate(-180deg);
+    transform: translate(0px, 125px) rotate(-180deg);
     opacity: .75; }
   75% {
-    transform: translate(-50px, 50px) rotate(-270deg); }
+    transform: translate(-62.5px, 62.5px) rotate(-270deg); }
   100% {
     transform: translate(0px, 0px) rotate(-360deg);
     opacity: .9; } }
@@ -57,14 +52,19 @@ body {
     transform: translate(0, 0);
     opacity: .9; }
   25% {
-    transform: translate(50px, 50px); }
+    transform: translate(62.5px, 62.5px); }
   50% {
-    transform: translate(0px, 100px);
+    transform: translate(0px, 125px);
     opacity: .75; }
   75% {
-    transform: translate(-50px, 50px); }
+    transform: translate(-62.5px, 62.5px); }
   100% {
     transform: translate(0px, 0px);
     opacity: .9; } }
+@keyframes slowly_move_background_image {
+  0% {
+    background-position: 0%   center; }
+  100% {
+    background-position: 100% center; } }
 
-/*# sourceMappingURL=1.css.map */
+/*# sourceMappingURL=index.css.map */

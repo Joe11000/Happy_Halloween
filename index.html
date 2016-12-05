@@ -1,7 +1,6 @@
 <html>
 <head>
-<link rel="stylesheet" type="text/css" href='1.css'>
-
+  <link rel="stylesheet" type="text/css" href='index.css'>
 </head>
 <body>
 
@@ -9,9 +8,10 @@
   <div id='pentagram-container'>
     <div id='text'>
       <div id='happy'>Happy</div>
-      <div id='halloween'>Halloween!!</div>
+      <div id='halloween'>Halloween</div>
     </div>
 
+    <!-- I created this using https://svg-edit.github.io/svgedit/releases/svg-edit-2.8.1/svg-editor.html -->
     <svg id='pentagram' width="510" height="550" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
      <!-- Created with SVG-edit - http://svg-edit.googlecode.com/ -->
      <defs>
@@ -52,10 +52,15 @@
 
 </div>
 
+  <script>
+    var fire_text = document.getElementById('happy');
+    fire_text.style.WebkitBackgroundClip = 'text';
+    fire_text.style.WebkitTextFillColor = 'transparent'
+
+    var fire_text = document.getElementById('halloween');
+    fire_text.style.WebkitBackgroundClip = 'text';
+    fire_text.style.WebkitTextFillColor = 'transparent'
+  </script>
 
 </body>
 </html>
-
-
-
-
