@@ -20,7 +20,7 @@ body {
         text-transform: uppercase;
         font-weight: bolder;
         font-size: 55px;
-        animation: move 10s linear 3s infinite;
+        animation: move 10s linear 2s infinite;
         top: 100px; }
         body #img-flex #pentagram-container #text #happy {
           position: absolute;
@@ -34,7 +34,7 @@ body {
           text-shadow: 0 0 12px red;
           font-size: 61px; }
       body #img-flex #pentagram-container #pentagram {
-        animation: move_and_rotate 10s linear 3s infinite;
+        animation: move_and_rotate 10s linear 2s infinite;
         transform-origin: center;
         opacity: .9; }
 

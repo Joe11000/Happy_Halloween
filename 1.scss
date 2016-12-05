@@ -26,7 +26,7 @@ body{
         text-transform: uppercase;
         font-weight: bolder;
         font-size: 55px;
-        animation: move 10s linear 3s infinite;
+        animation: move 10s linear 2s infinite;
         top: 100px;
 
         #happy{
@@ -45,7 +45,7 @@ body{
       }
 
       #pentagram{
-        animation: move_and_rotate 10s linear 3s infinite;
+        animation: move_and_rotate 10s linear 2s infinite;
         transform-origin: center;
         opacity: .9;
       }
