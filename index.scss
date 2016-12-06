@@ -32,14 +32,16 @@ body{
         #happy{
           position: absolute;
           transform: translateX(-50%);
-          background: url('fire.gif');
+          color: black;
+          text-shadow: 0 0 12px red;
           font-size: 85px;
         }
         #halloween{
           position: absolute;
           top: 287px;
           transform: translateX(-50%);
-          background: url('fire.gif');
+          color: black;
+          text-shadow: 0 0 15px red;
           font-size: 65px;
         }
       }
